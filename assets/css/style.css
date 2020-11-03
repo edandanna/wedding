@@ -936,20 +936,18 @@ deg
 	background: rgba(29, 22, 154, 0.10);
 	padding-left: 10%;
 	padding-right: 10%;
+	font-family: Comic Sans MS;
+	font-style: italic;
+	text-align: center;
 }
 
 .faqs .row-faqs h5 {
-	/* margin-left: 5%; */
-	text-align: center;
 	font-weight: bold;
-	font-family: Lucida Handwriting;	
 }
 
-.faqs .row-faqs h6 {
-	/* margin-left: 7%; */
+/* .faqs .row-faqs h6 {
 	text-align: center;
-	/* font-family: Lucida Handwriting; */
-}
+} */
 
 /*--------------------------------------------------------------
 # Navigation Menu
