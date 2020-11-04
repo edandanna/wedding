@@ -321,14 +321,14 @@
 										name="firstName" class="form-control" id="firstName"
 										placeholder="First Name" style="color: black;" /> <label
 										id="errFirstName"
-										style="display: none; font-style: italic; color: black; font-weight: bold;"></label>
+										style="display: none; font-style: italic; color: white; font-weight: bold;"></label>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="lastName">Last Name</label> <input type="text"
 										class="form-control" name="lastName" id="lastName"
 										placeholder="Last Name" style="color: black;" /> <label
 										id="errLastName"
-										style="display: none; font-style: italic; color: black; font-weight: bold;"></label>
+										style="display: none; font-style: italic; color: white; font-weight: bold;"></label>
 								</div>
 							</div>
 		
@@ -337,14 +337,14 @@
 									type="text" style="color: black;" class="form-control"
 									name="mobileNo" id="mobileNo" placeholder="0917 123 4567"
 									pattern="^(09|\+639)\d{9}$" /> <label id="errMobile"
-									style="display: none; font-style: italic; color: black; font-weight: bold;"></label>
+									style="display: none; font-style: italic; color: white; font-weight: bold;"></label>
 							</div>
 							
 							<div class="form-group">
 								<label for="mobileNo">Address (for contact tracing purposes)</label> <input
 									type="text" style="color: black;" class="form-control"
 									name="address" id="address"/> <label id="errAddress"
-									style="display: none; font-style: italic; color: black; font-weight: bold;"></label>
+									style="display: none; font-style: italic; color: white; font-weight: bold;"></label>
 							</div>
 							
 							<div class="form-group">
@@ -609,10 +609,10 @@
 		$(document).ready(function() {
 			$('#sendRsvp').click(function() {
 				var coming = $('input[name="comingRadio"]:checked').val();
-				var firstName = $('#firstName').val().replace(/ /g, "");
-				var lastName = $('#lastName').val().replace(/ /g, "");
+				var firstName = $('#firstName').val().trim();
+				var lastName = $('#lastName').val().trim();
 				var mobileNo = $('#mobileNo').val().replace(/ /g, "").replace(/-/g, "");
-				var address = $('#address').val().replace(/ /g, "");
+				var address = $('#address').val().trim();
 				var leaveMessage = $('#leaveMessage').val();
 				var send = true;
 				var reg = new RegExp($('#mobileNo').attr("pattern"));
